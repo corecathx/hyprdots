@@ -6,13 +6,22 @@
 Welcome to my personal dotfiles.  
 I'm a newbie on making these stuff, so don't expect much :]
 
+> This dotfiles is better on laptops.
+
 ## 🖼️ Preview
 
 The entire UI adapts automatically to your current wallpaper. Here are some examples:
 
-| Red Theme | Grayish Blue | Yellow |
-|-----------|---------------|--------|
-| ![Red](images/teto.png) | ![Grayish Blue](images/fox.png) | ![Yellow](images/wolf.png) |
+| Color Scheme | Screenshot |
+|--------------|------------|
+| Red | ![Red](images/teto.png) |
+| Grayish Blue | ![Grayish Blue](images/fox.png) |
+| Yellow | ![Yellow](images/wolf.png) |
+
+### Lockscreen
+![Yellow](images/lock.png)
+
+
 
 ## ⌨️ Keybinds
 You can check the list [here](KEYBINDS.md)
