@@ -1,0 +1,50 @@
+@import "/home/corecat/.cache/wal/colors-waybar.css";
+* {
+    transition: all 0.25s ease-out;
+    border-radius: 20px;
+    color: @foreground;
+    border-radius: 20px;
+    font-family: "Rubik";
+
+}
+
+/* Using the RGB values for --background with 0.5 opacity */
+window {
+    border: 1px solid @color1;
+    background-color: alpha(@background, 0.8);
+}
+
+#entry {
+    margin: 5px;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    opacity: 0.8;
+}
+
+#entry:selected {
+    /* Using the foreground's RGB values with 0.1 opacity for a subtle highlight */
+    background: alpha(@color1, 0.2); /* Derived from var(--foreground) */
+    padding-left: 50px;
+    opacity: 1;
+}
+
+#expander-box {
+    background: transparent;
+}
+
+#input {
+    background-color: transparent;
+    font-weight: 500;
+    padding: 5px 30px;
+    box-shadow: none;
+    border: none;
+}
+
+#input:focus {
+    
+}
+
+#img {
+    padding-right: 22px;
+}

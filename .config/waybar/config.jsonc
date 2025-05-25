@@ -1,0 +1,123 @@
+{
+	"layer": "top",
+	"spacing": 10,
+	"modules-left": [
+		"clock",
+		"hyprland/window",
+		"cpu",
+		"memory",
+		"tray"
+	],
+	"modules-center": [
+		"hyprland/workspaces"
+	],
+	"modules-right": [
+		"mpris",
+		"wireplumber",
+		//"custom/notification",
+		"custom/indicator",
+		"custom/battery"
+	],
+	"memory": {
+		"interval": 5,
+		"format": "<span font='Material Symbols Rounded' size='x-large' rise='-4pt'>memory_alt</span> {percentage}%",
+		"tooltip-format": "Memory: {used:0.1f}GB / {total:0.1f}GB",
+		"on-click": "missioncenter"
+	},
+	"cpu": {
+		"interval": 1,
+		"format": "<span font='Material Symbols Rounded' size='x-large' rise='-4pt'>memory</span> {usage}%",
+		"on-click": "missioncenter"
+	},
+	"mpris": {
+		"format": "<span font='Material Symbols Rounded' size='x-large' rise='-4pt'>{player_icon}</span> {title}",
+		"format-paused": "<span font='Material Symbols Rounded' size='x-large' rise='-4pt'>{status_icon}</span> {dynamic}",
+		"tooltip-format": "",
+		"player-icons": {
+			"default": "play_arrow"
+		},
+		"status-icons": {
+			"paused": "pause"
+		},
+		"interval": 1,
+		"dynamic-importance-order": [
+			"title"
+		],
+		"dynamic-order": [
+			"title"
+		],
+		"title-len": 30
+	},
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"active": "",
+			"default": "",
+			"empty": ""
+		},
+		"persistent-workspaces": {
+			"*": [ 1,2 ]
+		},
+		"all-outputs": true,
+		"on-scroll-up": "hyprctl dispatch workspace e-1",
+		"on-scroll-down": "hyprctl dispatch workspace e+1"
+	},
+	"custom/battery": {
+		"exec": "~/.config/waybar/custom/battery.sh",
+		"tooltip-format": "",
+		"on-click": "XDG_CURRENT_DESKTOP=GNOME gnome-control-center power",
+		"restart-interval": 2
+	},
+	"custom/indicator": {
+		"exec": "~/.config/waybar/custom/indicator.sh",
+		"tooltip-format": "",
+		"on-click": "XDG_CURRENT_DESKTOP=GNOME gnome-control-center wifi",
+		"restart-interval": 1
+	},
+	"clock": {
+		"format": "{:%H:%M • <span size='small'>%a, %d/%m</span>}",
+		"tooltip-format": "{:%H:%M • <span size='small'>%a, %d/%m</span>}"
+	},
+	"hyprland/window": {
+		"format": "<span>{initialClass}</span>",
+		"icon": true,
+		"icon-size": 18,
+		"separate-outputs": true,
+		"tooltip": true,
+		"tooltip-format": "balls"
+	},
+	"wireplumber": {
+		"format": "<span font='Material Symbols Rounded' size='x-large' rise='-5pt'>{icon}</span> {volume}% ",
+		"format-muted": "<span font='Material Symbols Rounded' size='x-large' rise='-5pt'>volume_off</span>",
+		"max-volume": 150,
+		"scroll-step": 5,
+		"on-click": "XDG_CURRENT_DESKTOP=GNOME gnome-control-center sound",
+		"format-icons": [
+			"volume_down",
+			"volume_up"
+		]
+	},
+	"tray": {
+		"icon-size": 16,
+		"spacing": 10
+	},
+	"custom/notification": {
+		"tooltip": false,
+		"format": "{icon}",
+		"format-icons": {
+			"notification": "<span font='Material Symbols Rounded' size='x-large' rise='-5pt'>notifications</span><span foreground='red' rise='5pt'>•</span>",
+			"none": "<span font='Material Symbols Rounded' size='x-large' rise='-5pt'>notifications</span>",
+			"dnd-notification": "<span font='Material Symbols Rounded' size='x-large' rise='-5pt'>notifications_off</span><span foreground='red' rise='5pt'>•</span>",
+			"dnd-none": "<span font='Material Symbols Rounded' size='x-large' rise='-5pt'>notifications_off</span>",
+			"inhibited-notification": "<span font='Material Symbols Rounded' size='x-large' rise='-5pt'>notifications</span><span foreground='red' rise='5pt'>•</span>",
+			"inhibited-none": "<span font='Material Symbols Rounded' size='x-large' rise='-5pt'>notifications</span>",
+			"dnd-inhibited-notification": "<span font='Material Symbols Rounded' size='x-large' rise='-5pt'>notifications_off</span><span foreground='red' rise='5pt'>•</span>",
+			"dnd-inhibited-none": "<span font='Material Symbols Rounded' size='x-large' rise='-5pt'>notifications_off</span>"
+		},
+		"return-type": "json",
+		"exec-if": "which swaync-client",
+		"exec": "swaync-client -swb",
+		"restart-interval": 1,
+		"escape": true
+	}
+}
