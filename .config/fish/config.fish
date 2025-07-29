@@ -22,4 +22,5 @@ alias show-fixes="nano ~/Documents/Fixes/list"
 alias reload-waybar="pkill waybar && waybar & disown"
 alias logout="hyprctl dispatch exit"
 alias twsconnect="bluetoothctl connect 41:42:FF:BB:22:CF"
+alias hyprdir="cd ~/.config/hypr/"
 cat ~/.cache/wal/sequences &

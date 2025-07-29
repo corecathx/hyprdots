@@ -1,0 +1,39 @@
+# ~/.config/starship.toml
+
+add_newline = false
+
+format = """
+[╭─](bold blue) $username$hostname$directory$git_branch$git_status
+[╰](bold blue)$character"""
+
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
+vicmd_symbol = "[❯](blue)"
+
+[directory]
+style = "bold cyan"
+truncation_length = 3
+truncate_to_repo = true
+read_only = " "
+format = " [$path]($style)[$read_only]($style)"
+
+[username]
+show_always = true
+style_user = "bold yellow"
+format = "[$user]($style)@"
+
+[hostname]
+disabled = false
+
+[git_branch]
+symbol = "  "
+style = "bold purple"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "red"
+format = "[$all_status]($style) "
+
+[os]
+disabled = false
