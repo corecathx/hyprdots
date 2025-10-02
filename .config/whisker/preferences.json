@@ -1,0 +1,10 @@
+{
+	"smallBar": false,
+	"barPosition": "left",
+	"cavaEnabled": true,
+	"darkMode": true,
+	"useVideoWallpaper": false,
+	"wallpaper": "/home/corecat/Pictures/wallpapers/mera.png",
+	"barPadding": "300",
+	"keepBarOpaque": true
+}

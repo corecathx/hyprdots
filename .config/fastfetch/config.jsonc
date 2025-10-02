@@ -1,21 +1,25 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "type": "auto", // Logo type: auto, builtin, small, file, etc.
-    //"source": "/home/corecat/Pictures/svgcore.png", // Built-in logo name or file path
-    "width": 20, // Width in characters (for image logos)
-    "height": 10, // Height in characters (for image logos)
+    "type": "auto",
+    "width": 20,
+    "height": 10,
     "padding": {
-      "top": 3, // Top padding
-      "left": 0, // Left padding
-      "right": 4 // Right padding
+      "top": 3,
+      "left": 1,
+      "right": 4
     },
+    "color": {
+      "1": "blue",
+      "2": "cyan"
+    }
   },
   "modules": [
     "break",
     {
       "type": "custom",
-      "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
+      "format": "\u001b[90m╭────────────────────── Hardware ──────────────────────╮",
+      "keyColor": "blue"
     },
     {
       "type": "host",
@@ -44,12 +48,12 @@
     },
     {
       "type": "custom",
-      "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+      "format": "\u001b[90m╰──────────────────────────────────────────────────────╯"
     },
     "break",
     {
       "type": "custom",
-      "format": "\u001b[90m┌──────────────────────Software──────────────────────┐"
+      "format": "\u001b[90m╭──────────────────────Software──────────────────────╮"
     },
     {
       "type": "os",
@@ -108,12 +112,12 @@
     },
     {
       "type": "custom",
-      "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+      "format": "\u001b[90m╰────────────────────────────────────────────────────╯"
     },
     "break",
     {
       "type": "custom",
-      "format": "\u001b[90m┌────────────────────Uptime / Age / DT────────────────────┐"
+      "format": "\u001b[90m╭──────────────Uptime / Age / DT─────────────────────╮"
     },
     {
       "type": "command",
@@ -133,7 +137,7 @@
     },
     {
       "type": "custom",
-      "format": "\u001b[90m└─────────────────────────────────────────────────────────┘"
+      "format": "\u001b[90m╰────────────────────────────────────────────────────╯"
     },
     "break"
   ]
